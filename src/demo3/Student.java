@@ -37,7 +37,8 @@ public class Student {
 		
 		@Override
 		public int hashCode() {
-			return age;
+			int hash=rollno.hashCode();
+			return Integer.parseInt(rollno);
 		}
 	
 		 @Override
@@ -51,8 +52,8 @@ public class Student {
 			   }
 				
 			    Student that=(Student)arg;	
-				boolean isequal=this.rollno==that.rollno;
-				return isequal;
+				boolean equals=this.rollno.equals(that.rollno);
+				return equals;
 			}
 			
 			

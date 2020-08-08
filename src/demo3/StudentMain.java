@@ -16,11 +16,11 @@ public class StudentMain {
 		Set<Student> set=new HashSet<Student>();
 		Student s1=new Student("11",20);
 		set.add(s1);
-		Student s2=new Student("16",60);
+		Student s2=new Student("16",31);
 		set.add(s2);
-		Student s3=new Student("19",50);
+		Student s3=new Student("19",16);
 		set.add(s3);
-		Student s4=new Student("15",70);
+		Student s4=new Student("15",25);
 		set.add(s4);
 		
 		Iterator<Student> iterator=set.iterator();
@@ -28,6 +28,8 @@ public class StudentMain {
 			Student student = iterator.next();
 			int i=student.getAge();
 			if(i>=21) {
+				List<Student> list =new ArrayList<>();
+				list.add(student);
 				System.out.println(i);
 			}
 			System.out.println("Age=" + student.getAge() + " " + "RollNO"+ student.getRollno());

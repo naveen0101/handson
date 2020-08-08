@@ -2,7 +2,9 @@ package demo3;
 import java.util.*;
 
 public class StudentMain1 {
-	 private Set<Student1> set = new HashSet<>();
+	 private Set<Student1> even = new HashSet<>();
+	 private Set<Student1> odd = new HashSet<>();
+	 private List<String> list=new ArrayList<>();
 	private Map<String, Student1> stud = new HashMap();
 
 	public static void main(String[] args) {
@@ -20,7 +22,7 @@ public class StudentMain1 {
 		Student1 a4= new Student1("2b",31, "chinna");
 		stud.put("2b",a4);
 		
-		app();
+		
 	}
 
 	public void app() {
@@ -29,19 +31,34 @@ public class StudentMain1 {
 			Student1 s = stud.get(k);
 		
 			if (s.getAge() % 2 == 0) {
-				System.out.println("age is even=" + s.getAge());
-			} else {
-				System.out.println("age is odd=" + s.getAge());
+				even.add(s);
 			}
-			
-			List<String>a= new ArrayList();
-		    a.add(s.getRollNo());
-
-			for (String r1:a) {
-				System.out.println(r1);
 				
-			}
+				else {
+					odd.add(s);
+				}
+			list.add(s.getRollNo());
 		}
+ displayAll();
+		
+	}
 
-	}}
+	private void displayAll() {
+		for(Student1 s:even) {
+			System.out.println("rollno"+s.getRollNo()+"age"+s.getAge());
+		}
+		for(Student1 s:odd) {
+			System.out.println("roll no"+s.getRollNo()+"age"+s.getAge());
+		}
+		for(String s:list) {
+			System.out.println(s);
+	}	
+		
+	}
+
+}
+			
+			
+
+	
 

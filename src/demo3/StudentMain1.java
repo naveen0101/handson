@@ -27,18 +27,16 @@ public class StudentMain1 {
 		Set<String> keys = stud.keySet();
 		for (String k : keys) {
 			Student1 s = stud.get(k);
+		
+			if (s.getAge() % 2 == 0) {
+				System.out.println("age is even=" + s.getAge());
+			} else {
+				System.out.println("age is odd=" + s.getAge());
+			}
 			
 			List<String>a= new ArrayList();
 		    a.add(s.getRollNo());
 
-			if (s.getAge() % 2 == 0) {
-				List<Student1> even = new ArrayList();
-				even.add(stud.get(k));
-			} else {
-				List<Student1> odd = new ArrayList();
-				odd.add(stud.get(k));
-			}
-			
 			for (String r1:a) {
 				System.out.println(r1);
 				
